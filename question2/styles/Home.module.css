@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Ubuntu:wght@300&display=swap');
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer{
+  background: rgb(23,121,219);
+  padding: 2rem 2.5rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 2fr;
+  grid-template-columns: 1fr 2rem 1.5fr;
+  grid-template-areas: "name name name"
+   "birth . country"
+   "school school school"
+   "study study study";
+  grid-row-gap: 1rem;
+}
+
+.name{
+  grid-area: name;
+}
+
+.birth{
+  grid-area: birth;
+}
+
+.country{
+  grid-area: country;
+}
+
+.school{
+  grid-area: school;
+}
+
+.study{
+  grid-area: study;
+}
+
+.formContainer div label{
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  color: white;
+  font-family: 'Lato';
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.formContainer input,
+.formContainer textarea{
+  background: rgb(23,121,219);
+  border: 1px solid white;
+  height: 3rem;
+  color: white;
+  font-family: 'Lato';
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding-left: 1rem;
+}
+
+.formContainer textarea:focus, 
+.formContainer input:focus{
+    outline: none;
+}
+
+.formContainer input[type='date']{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.formContainer input[type="date"]::-webkit-calendar-picker-indicator {
+  margin-top: 5px;
+  margin-left: -5px;
+}
+
+.formContainer input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.formContainer textarea{
+  resize: none;
+  height: 10rem;
+  padding-top: 7px;
+}
+
+.formContainer textarea::placeholder{
+  color: lightgrey;
+  font-style: italic;
+}

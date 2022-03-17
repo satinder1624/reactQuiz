@@ -1,0 +1,5 @@
+1) => Open terminal
+2) => cd to that directory
+3) => node function.js 
+
+function.js is the compiled version of function.ts
